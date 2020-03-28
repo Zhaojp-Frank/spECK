@@ -15,12 +15,11 @@ This repository is based on *spECK: Accelerating GPU Sparse Matrix-Matrix Multip
         - 98304‬ for Volta devices
     - if you do not know your GPU generation or hardware limits, compile and run spECK and it will throw errors with information about the correct values
 6. Build
-    - Windows (use CMake GUI to setup project) or
-        o Build the project using "cmake -DCUDA_BUILD_CC70=TRUE -S . -B build -A x64" (Set CCXX to correct Compute Capability) followed by opening "runSpeck.sln", select "Release" configuration and build 
-        o run spECK using ".\build\Release\runspECK.exe <path-to-csr-matrix> config.ini"
-    - Linux 
-        o Set the correct ComputeCapability (Default is CC70) in "linuxsetup.sh" and run "./linuxsetup.sh"
-        o run spECK using "./build/runspECK <path-to-csr-matrix> config.ini"
+    - Windows (use CMake GUI to setup project) or Build the project using "cmake -DCUDA_BUILD_CC70=TRUE -S . -B build -A x64" (Set CCXX to correct Compute Capability) followed by opening "runSpeck.sln", select "Release" configuration and build 
+        -- run spECK using ".\build\Release\runspECK.exe <path-to-csr-matrix> config.ini"
+    - Linux:
+    1. Set the correct ComputeCapability (Default is CC70) in "linuxsetup.sh" and run "./linuxsetup.sh"
+    2. run spECK using "./build/runspECK <path-to-csr-matrix> config.ini"
 
 
 # Notes
@@ -41,4 +40,4 @@ Config.ini contains helpful options for:
 
 
 # Bibtex
-TBA
+https://ppopp20.sigplan.org/details/PPoPP-2020-papers/17/spECK-Accelerating-GPU-Sparse-Matrix-Matrix-Multiplication-Through-Lightweight-Analy
